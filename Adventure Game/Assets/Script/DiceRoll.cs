@@ -41,6 +41,7 @@ public class DiceRoll : MonoBehaviour
         //Dice.Value("") to access the sum of diceroll
         if (Dice.Value("") > 0){
             yield return new WaitForSeconds(4.0f);
+            GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<PlayerMove>().Teleport(Dice.Value(""));
             diceCam.SetActive(false);
             mainCam.SetActive(true);
         }

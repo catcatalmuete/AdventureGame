@@ -25,4 +25,26 @@ public class PlayerMove : MonoBehaviour
             }
         }
     }
+
+    public void Teleport(int diceroll){
+        if(diceroll < 6){
+            //teleport purple
+            //transform.position = new Vector3(-50, 1, 50);
+            _navMeshAgent.Warp(new Vector3(-50, 1, 50));
+            print("purple");
+            return;
+        }
+        /*else if(diceroll % 2 == 0){
+            //teleport green
+            _navMeshAgent.Warp(new Vector3(-100, 1, -10));
+            print("green");
+            return;
+        }*/
+        else{
+            //teleport blue
+            //transform.position = new Vector3(-0, 1, 0);
+            _navMeshAgent.Warp(new Vector3(0, 1, 0));
+            print("blue");
+        }
+    }
 }
