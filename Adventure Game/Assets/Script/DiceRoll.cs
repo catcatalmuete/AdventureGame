@@ -24,13 +24,14 @@ public class DiceRoll : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("DiceRoll")) 
+        if (other.gameObject.CompareTag("DiceRoll"))
         {
             StartCoroutine(RollDice());
         }
     }
 
-    IEnumerator RollDice(){
+    IEnumerator RollDice()
+    {
         yield return new WaitForSeconds(0.01f);
         diceCam.SetActive(true);
         mainCam.SetActive(false);
@@ -39,7 +40,8 @@ public class DiceRoll : MonoBehaviour
         Dice.Roll("1d6", "d6-black", spawnPoint.transform.position, Force());
 
         //Dice.Value("") to access the sum of diceroll
-        if (Dice.Value("") > 0){
+        if (Dice.Value("") > 0)
+        {
             yield return new WaitForSeconds(4.0f);
             GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<PlayerMove>().Teleport(Dice.Value(""));
             diceCam.SetActive(false);
