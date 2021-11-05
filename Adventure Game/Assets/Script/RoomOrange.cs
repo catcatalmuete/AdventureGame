@@ -8,11 +8,14 @@ public class RoomOrange : MonoBehaviour
     private int candleCollectCount = 0;
     private int trueCount = 0; //number of candle lighted up on the torch post
     public GameObject[] candles;
+    public GameObject[] inventoryC;
     public GameObject chest;
     public GameObject rune;
     private int index;
     private int buffRoll;
     private bool runeCollect = false;
+    public bool[] TorchPostLight = {false, false, false, false};
+    
 
     
     // Start is called before the first frame update
@@ -21,13 +24,19 @@ public class RoomOrange : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             candles[i].SetActive(false);
+            inventoryC[i].SetActive(false);
         }
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        for (int i = 0; i < 4; i++)
+        {
+            if (i < candleCollectCount) {inventoryC[i].SetActive(true);}
+            else {inventoryC[i].SetActive(false);}
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,14 +48,14 @@ public class RoomOrange : MonoBehaviour
         } else if (other.gameObject.CompareTag("TorchPost") && candleCollectCount > 0)
         {
             index = int.Parse(other.gameObject.name);
-            candles[index].SetActive(true);
-            candleCollectCount -= 1;
-            trueCount += 1;
-            //update UI
-
-            if (trueCount == 4)
+            if (!TorchPostLight[index])
             {
-                StartCoroutine(OpenChest());
+                candles[index].SetActive(true);
+                TorchPostLight[index] = true;
+                candleCollectCount -= 1;
+                trueCount += 1;
+
+                if (trueCount == 4){ StartCoroutine(OpenChest());}
             }
         } else if (other.gameObject.CompareTag("OChest") && trueCount == 4 && !runeCollect)
         {
@@ -65,9 +74,9 @@ public class RoomOrange : MonoBehaviour
     IEnumerator CollectRune()
     {
         yield return new WaitForSeconds(1f);
-
         rune.SetActive(false);
         runeCollect = true;
+        yield return new WaitForSeconds(1f);
             //add rune to UI
             //run diceRoll in diceRoll
 
