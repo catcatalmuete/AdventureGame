@@ -54,7 +54,7 @@ public class DiceRoll : MonoBehaviour
     {
         //Vector3 rollTarget = Vector3.zero + new Vector3(2 + 7 * Random.value, .5F + 4 * Random.value, -2 - 3 * Random.value);
         //return Vector3.Lerp(spawnPoint.transform.position, rollTarget, 1).normalized * (-35 - Random.value * 20);
-        Vector3 rollTarget = Vector3.zero;
+        Vector3 rollTarget = Vector3.zero + new Vector3(0.1f * Random.value, 0.5f - 0.3f * Random.value, 0);
         return Vector3.Lerp(spawnPoint.transform.position, rollTarget, 1).normalized * (-35 - Random.value * 20);
     }
 

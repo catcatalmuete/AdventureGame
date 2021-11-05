@@ -12,7 +12,8 @@ public class PlayerMove : MonoBehaviour
     {
         Blue,
         Purple,
-        Green
+        Green,
+        Orange
     }
 
     public Room[] rooms;
@@ -38,26 +39,31 @@ public class PlayerMove : MonoBehaviour
 
     public void Teleport(int diceroll)
     {
-        if (diceroll < 3)
-        {
-            //teleport purple
+        // recaled on 4 rooms
+        if (diceroll <= 3){
+            //teleport purple / bad
             //transform.position = new Vector3(-50, 1, 50);
             _navMeshAgent.Warp(rooms[(int)Color.Purple].spawnPos.position);
             print("purple");
             return;
         }
-        else if(diceroll < 5){
-            //teleport green
+        else if(diceroll <= 6){
+            //teleport green / normal
             _navMeshAgent.Warp(rooms[(int)Color.Green].spawnPos.position);
             print("green");
             return;
         }
-        else
-        {
-            //teleport blue
+        else if(diceroll <= 9){
+            //teleport blue / initial
             //transform.position = new Vector3(-0, 1, 0);
             _navMeshAgent.Warp(rooms[(int)Color.Blue].spawnPos.position);
             print("blue");
+        }
+        else {
+            //teleport blue / initial
+            //transform.position = new Vector3(-0, 1, 0);
+            _navMeshAgent.Warp(rooms[(int)Color.Orange].spawnPos.position);
+            print("orange");
         }
     }
 }
