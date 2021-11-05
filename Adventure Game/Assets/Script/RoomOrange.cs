@@ -11,6 +11,7 @@ public class RoomOrange : MonoBehaviour
     public GameObject[] inventoryC;
     public GameObject chest;
     public GameObject rune;
+    public GameObject runeUI;
     private int index;
     private int buffRoll;
     private bool runeCollect = false;
@@ -21,6 +22,7 @@ public class RoomOrange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        runeUI.SetActive(false);
         for (int i = 0; i < 4; i++)
         {
             candles[i].SetActive(false);
@@ -75,9 +77,10 @@ public class RoomOrange : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         rune.SetActive(false);
+
         runeCollect = true;
-        yield return new WaitForSeconds(1f);
-            //add rune to UI
+        runeUI.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
             //run diceRoll in diceRoll
 
         GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<DiceRoll>().Roll();

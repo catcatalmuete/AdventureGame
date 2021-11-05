@@ -3004,7 +3004,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8667eed1a2a325c44ba2b48239ba063b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3439,6 +3439,7 @@ MonoBehaviour:
   - {fileID: 1479509234}
   chest: {fileID: 534902350}
   rune: {fileID: 542405334}
+  runeUI: {fileID: 327917353}
   TorchPostLight: 00000000
 --- !u!54 &620701249
 Rigidbody:
@@ -5563,7 +5564,7 @@ RectTransform:
   m_GameObject: {fileID: 1044056605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.45, z: 3}
+  m_LocalScale: {x: 5, y: 5, z: 3}
   m_Children: []
   m_Father: {fileID: 1082878030}
   m_RootOrder: 3
@@ -12718,7 +12719,7 @@ RectTransform:
   m_GameObject: {fileID: 2058962965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -2.03}
-  m_LocalScale: {x: 3, y: 3, z: 2}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1082878030}
   m_RootOrder: 2
