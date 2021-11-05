@@ -84,8 +84,10 @@ public class RoomOrange : MonoBehaviour
             //run diceRoll in diceRoll
 
         GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<DiceRoll>().Roll();
+        yield return new WaitForSeconds(5f);
         buffRoll = PublicVars.diceVal;
-        if (buffRoll <=6){
+        //PublicVars.diceRollModifier += buffRoll;
+        if (buffRoll <=5){
             //get diceRoll buff +2
             PublicVars.diceRollModifier += 2;
         } else {

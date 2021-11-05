@@ -4541,12 +4541,12 @@ GameObject:
   - component: {fileID: 620701242}
   - component: {fileID: 620701241}
   - component: {fileID: 620701240}
-  - component: {fileID: 620701244}
   - component: {fileID: 620701245}
   - component: {fileID: 620701247}
-  - component: {fileID: 620701246}
   - component: {fileID: 620701248}
   - component: {fileID: 620701249}
+  - component: {fileID: 620701246}
+  - component: {fileID: 620701244}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4640,14 +4640,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 620701239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c34becafbd87a5458ad3e352eb1aaa0, type: 3}
+  m_Script: {fileID: 11500000, guid: 2905b1877525dd647b84dc9c39f82f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rooms:
-  - {fileID: 660750800}
-  - {fileID: 759600239}
-  - {fileID: 1303856692}
-  - {fileID: 1699013027974527803}
+  mainCam: {fileID: 963194225}
+  diceCam: {fileID: 953128392}
+  teleport: 0
 --- !u!195 &620701245
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4679,12 +4677,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 620701239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d0fea1e214a8e049a861b9f968c1430, type: 3}
+  m_Script: {fileID: 11500000, guid: 209ece03c02774b4dadc920f514c656b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCam: {fileID: 963194225}
-  diceCam: {fileID: 953128392}
-  teleport: 0
+  rooms:
+  - {fileID: 660750800}
+  - {fileID: 759600239}
+  - {fileID: 1303856692}
+  - {fileID: 1699013027974527803}
 --- !u!114 &620701247
 MonoBehaviour:
   m_ObjectHideFlags: 0
