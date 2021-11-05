@@ -54,6 +54,7 @@
      <Compile Include="Assets\Script\CameraFollow.cs" />
      <Compile Include="Assets\Dice\Plugins\Die.cs" />
      <Compile Include="Assets\Script\Room.cs" />
+     <Compile Include="Assets\Script\BadTileR1.cs" />
      <Compile Include="Assets\Script\PlayerMove.cs" />
      <Compile Include="Assets\Dice\Plugins\Dice.cs" />
      <None Include="Assets\Dice\-Read-Me-.txt" />
