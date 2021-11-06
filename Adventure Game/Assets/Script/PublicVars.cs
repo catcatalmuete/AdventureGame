@@ -9,6 +9,8 @@ public class PublicVars : MonoBehaviour
     public static bool instantDeath = true;
     //sum all buffs/debuffs the player has
     public static int diceRollModifier = 0;
+    //strikes occurred in the green room
+    public static int numStrikes = 0;
     // Start is called before the first frame update
     void Start()
     {
