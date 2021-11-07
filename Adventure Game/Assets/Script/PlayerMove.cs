@@ -39,7 +39,7 @@ public class PlayerMove : MonoBehaviour
 
     public void Teleport(int diceroll)
     {
-        diceroll = 11;
+        diceroll = 6;
         // recaled on 4 rooms
         if (diceroll <= 3){
             //teleport purple / bad
