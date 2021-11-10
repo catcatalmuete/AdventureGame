@@ -14,7 +14,8 @@ public class Player : MonoBehaviour
         Blue,
         Purple,
         Green,
-        Orange
+        Orange,
+        Red
     }
 
     public Room[] rooms;
