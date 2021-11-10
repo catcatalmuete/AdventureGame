@@ -22,17 +22,21 @@ public class LightUpTile : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         if (other.CompareTag("Player")){
-            if (lit == false){
-                PublicVars.numTilesMand++;
-                lit = true;
+            if (PublicVars.numTilesMand >= 4){
                 _meshRender.material = litm;
             }
             else{
-                PublicVars.numTilesMand--;
-                lit = false;
-                _meshRender.material = unlitm;
+                if (lit == false){
+                    PublicVars.numTilesMand++;
+                    lit = true;
+                    _meshRender.material = litm;
+                }
+                else{
+                    PublicVars.numTilesMand--;
+                    lit = false;
+                    _meshRender.material = unlitm;
+                }
             }
-            print(PublicVars.numTilesMand);
         }
     }
 }
