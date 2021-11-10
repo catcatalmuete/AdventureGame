@@ -13,6 +13,7 @@ public class PublicVars : MonoBehaviour
     public static int numStrikes = 0;
     //num of tiles lit up in red room for each puzzle
     public static int numTilesMand = 0;
+    public static int numTilesOp = 0;
     // Start is called before the first frame update
     void Start()
     {
