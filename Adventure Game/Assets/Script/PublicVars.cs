@@ -11,6 +11,8 @@ public class PublicVars : MonoBehaviour
     public static int diceRollModifier = 0;
     //strikes occurred in the green room
     public static int numStrikes = 0;
+    //num of tiles lit up in red room for each puzzle
+    public static int numTilesMand = 0;
     // Start is called before the first frame update
     void Start()
     {
