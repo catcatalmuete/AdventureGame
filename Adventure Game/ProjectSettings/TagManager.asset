@@ -10,6 +10,9 @@ TagManager:
   - Teleport
   - OChest
   - stop
+  - Shield
+  - WChest
+  - WCrate
   layers:
   - Default
   - TransparentFX

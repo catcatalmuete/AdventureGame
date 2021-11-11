@@ -14,6 +14,9 @@ public class PublicVars : MonoBehaviour
     //num of tiles lit up in red room for each puzzle
     public static int numTilesMand = 0;
     public static int numTilesOp = 0;
+
+    // used for room White to check if chest are opened
+    public static bool WOpen = false;
     // Start is called before the first frame update
     void Start()
     {
