@@ -19,7 +19,7 @@ public class PressureBoard : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Shield")) 
+        if (other.gameObject.CompareTag("WShield")) 
         {
             StartCoroutine(OpenChest());
         }
