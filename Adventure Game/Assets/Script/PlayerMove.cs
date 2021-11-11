@@ -14,7 +14,8 @@ public class PlayerMove : MonoBehaviour
         Purple,
         Green,
         Orange,
-        Red
+        Red,
+        White
     }
 
     public Room[] rooms;
@@ -67,11 +68,17 @@ public class PlayerMove : MonoBehaviour
             _navMeshAgent.Warp(rooms[(int)Color.Orange].spawnPos.position);
             print("orange");
         }
-        else {
+        else if(diceroll <= 9){
             //teleport orange / good
             //transform.position = new Vector3(-0, 1, 0);
             _navMeshAgent.Warp(rooms[(int)Color.Red].spawnPos.position);
             print("red");
+        }
+        else {
+            //teleport orange / good
+            //transform.position = new Vector3(-0, 1, 0);
+            _navMeshAgent.Warp(rooms[(int)Color.White].spawnPos.position);
+            print("white");
         }
     }
 }
