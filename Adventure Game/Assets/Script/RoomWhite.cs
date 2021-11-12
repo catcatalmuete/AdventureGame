@@ -93,7 +93,7 @@ public class RoomWhite : MonoBehaviour
     IEnumerator DisableTrigger()
     {
         _collider.isTrigger = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         _collider.isTrigger = true;
     }
 }
