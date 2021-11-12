@@ -11,6 +11,13 @@ public class MainMenu : MonoBehaviour
         _transitionManager = FindObjectOfType<TransitionManager>();
     }
 
+    public void Update(){
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+    }
+
     public void StartGame()
     {
         _transitionManager.LoadScene("Main_Demo");
