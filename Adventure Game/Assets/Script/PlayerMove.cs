@@ -51,6 +51,10 @@ public class PlayerMove : MonoBehaviour
         {
             playerAnimator.SetBool("isRunning", false);
         }
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
 
     public void Teleport(int diceroll)
