@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
 {
     NavMeshAgent _navMeshAgent;
     Camera mainCam;
+    public Animator playerAnimator;
 
     public enum Color
     {
@@ -37,11 +38,19 @@ public class PlayerMove : MonoBehaviour
                 _navMeshAgent.destination = hit.point;
             }
         }
+
+        if(_navMeshAgent.velocity != Vector3.zero)
+        {
+            playerAnimator.SetBool("isRunning", true);
+        }
+        else if(playerAnimator.velocity == Vector3.zero)
+        {
+            playerAnimator.SetBool("isRunning", false);
+        }
     }
 
     public void Teleport(int diceroll)
     {
-        diceroll = 9;
         // recaled on 4 rooms
         if (diceroll <= 2){
             //teleport purple / bad
