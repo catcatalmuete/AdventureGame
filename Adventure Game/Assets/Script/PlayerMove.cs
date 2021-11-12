@@ -12,10 +12,10 @@ public class PlayerMove : MonoBehaviour
     public enum Color
     {
         Blue,
-        White,
         Green,
-        Orange,
-        Red
+        White,
+        Red,
+        Orange
     }
 
     public Room[] rooms;
@@ -27,6 +27,7 @@ public class PlayerMove : MonoBehaviour
         _navMeshAgent = GetComponent<NavMeshAgent>();
         mainCam = Camera.main;
         currentRoom = rooms[(int)Color.Blue];
+        currentRoom.complete = true;
         roomsToFinish = new List<Room>(rooms);
     }
 
@@ -77,7 +78,7 @@ public class PlayerMove : MonoBehaviour
         Debug.Log("diceroll: " + diceroll.ToString());
         Debug.Log("roomSep: " + roomSep.ToString());
         Debug.Log("roomVal: " + roomVal.ToString());
-
+        roomVal = 0;
         currentRoom = roomsToFinish[roomVal];
          _navMeshAgent.Warp(roomsToFinish[roomVal].spawnPos.position);
         

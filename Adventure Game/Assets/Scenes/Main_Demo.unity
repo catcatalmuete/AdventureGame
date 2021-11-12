@@ -21252,10 +21252,10 @@ MonoBehaviour:
   playerAnimator: {fileID: 828352715}
   rooms:
   - {fileID: 660750800}
-  - {fileID: 114008034}
   - {fileID: 1303856692}
-  - {fileID: 1699013027974527803}
+  - {fileID: 114008034}
   - {fileID: 353268400}
+  - {fileID: 1699013027974527803}
   currentRoom: {fileID: 0}
 --- !u!114 &828352712
 MonoBehaviour:

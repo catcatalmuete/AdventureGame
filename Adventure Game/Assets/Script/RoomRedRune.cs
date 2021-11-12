@@ -43,7 +43,7 @@ public class RoomRedRune : MonoBehaviour
         //PublicVars.diceRollModifier += buffRoll;
         if (buffRoll >=6){
             //get diceRoll buff +2
-            PublicVars.diceRollModifier += 1;
+            PublicVars.diceRollModifier += 2;
         }
 
         // index = rune collect count that stars from 0

@@ -28,13 +28,18 @@ public class ThreeStrikes : MonoBehaviour
                 other.GetComponent<DiceRoll>().Roll();
                 //greenUI.SetActive(true);
                 int diceV = PublicVars.diceVal;
-                if (diceV <= 4){FindObjectOfType<TransitionManager>().LoadScene("Start");}
+                if (diceV <= 4){StartCoroutine(Death());}
                 else {PublicVars.diceRollModifier = 0;}
 
                 //other.GetComponent<PlayerMove>().Teleport(diceV);
             }
             print(PublicVars.numStrikes);
         }
+    }
+
+    IEnumerator Death(){
+        yield return new WaitForSeconds(2f);
+        FindObjectOfType<TransitionManager>().LoadScene("Start");
     }
 
 }

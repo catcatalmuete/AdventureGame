@@ -1119,4 +1119,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Start.unity
   - Assets/Scenes/Main_Demo.unity
   - Assets/Scenes/Win.unity
-  playerPath: D:/NYU/CS3113/PC/Adventure Game.exe
+  playerPath: D:/NYU/CS3113/PC1/Adventure Game.exe
