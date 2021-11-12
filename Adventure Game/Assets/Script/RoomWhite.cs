@@ -30,6 +30,7 @@ public class RoomWhite : MonoBehaviour
         runeUI[0].SetActive(false);
         runeUI[1].SetActive(false);
         _collider = GetComponent<Collider>();
+        index = 0;
 
     }
 
@@ -83,9 +84,13 @@ public class RoomWhite : MonoBehaviour
         yield return new WaitForSeconds(5f);
         buffRoll = PublicVars.diceVal;
         //PublicVars.diceRollModifier += buffRoll;
-        if (buffRoll >=5){
+        if (buffRoll >=6){
             //get diceRoll buff +2
             PublicVars.diceRollModifier += 1;
+        }
+
+        if (runeCollect[0] && runeCollect[1]){
+            FindObjectOfType<PlayerMove>().currentRoom.complete = true;
         }
 
     }
@@ -93,7 +98,7 @@ public class RoomWhite : MonoBehaviour
     IEnumerator DisableTrigger()
     {
         _collider.isTrigger = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         _collider.isTrigger = true;
     }
 }

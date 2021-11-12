@@ -18,9 +18,11 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        TempBuff.text = "Next Dice Roll " + PublicVars.diceRollModifier.ToString();
-        if (!PublicVars.instantDeath){
-            NonDeath.text = "Nondeath";
+        if (PublicVars.diceRollModifier != 0) {
+            TempBuff.text = "Next Dice Roll +" + PublicVars.diceRollModifier.ToString();
+            //if (!PublicVars.instantDeath){
+                //NonDeath.text = "Nondeath";
+            //}
         }
     }
 }
