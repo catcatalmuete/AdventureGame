@@ -12,11 +12,10 @@ public class PlayerMove : MonoBehaviour
     public enum Color
     {
         Blue,
-        Purple,
+        White,
         Green,
         Orange,
-        Red,
-        White
+        Red
     }
 
     public Room[] rooms;
@@ -55,6 +54,12 @@ public class PlayerMove : MonoBehaviour
         {
             Application.Quit();
         }
+
+        if (PublicVars.runeTotal == 5)
+        {
+            FindObjectOfType<TransitionManager>().LoadScene("Win");
+            return;
+        }
     }
 
     public void Teleport(int diceroll)
@@ -65,11 +70,6 @@ public class PlayerMove : MonoBehaviour
             roomsToFinish.Remove(currentRoom);
         }
         // if no rooms are left to finish, the player wins!
-        if (roomsToFinish.Count == 0)
-        {
-            FindObjectOfType<TransitionManager>().LoadScene("Win");
-            return;
-        }
         // determine the available rooms to visit
         int roomSep = 12 / roomsToFinish.Count; // divide rolls among remaining rooms
         int roomVal = (diceroll-1) / roomSep;   // set val according to roll

@@ -17,6 +17,7 @@ public class PublicVars : MonoBehaviour
 
     // used for room White to check if chest are opened
     public static bool WOpen = false;
+    public static int runeTotal = 0;
     // Start is called before the first frame update
     void Start()
     {

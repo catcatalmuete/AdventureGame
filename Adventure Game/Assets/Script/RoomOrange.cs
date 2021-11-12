@@ -82,6 +82,7 @@ public class RoomOrange : MonoBehaviour
 
         runeCollect = true;
         runeUI.SetActive(true);
+        PublicVars.runeTotal += 1;
         yield return new WaitForSeconds(0.5f);
             //run diceRoll in diceRoll
 

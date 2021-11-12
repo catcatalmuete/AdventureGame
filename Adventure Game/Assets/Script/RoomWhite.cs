@@ -76,6 +76,7 @@ public class RoomWhite : MonoBehaviour
         rune[i].SetActive(false);
 
         runeCollect[i] = true;
+        PublicVars.runeTotal += 1;
         runeUI[i].SetActive(true);
         yield return new WaitForSeconds(0.5f);
             //run diceRoll in diceRoll

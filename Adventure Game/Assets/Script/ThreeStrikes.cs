@@ -28,7 +28,10 @@ public class ThreeStrikes : MonoBehaviour
                 other.GetComponent<DiceRoll>().Roll();
                 //greenUI.SetActive(true);
                 int diceV = PublicVars.diceVal;
-                other.GetComponent<PlayerMove>().Teleport(diceV);
+                if (diceV <= 4){FindObjectOfType<TransitionManager>().LoadScene("Start");}
+                else {PublicVars.diceRollModifier = 0;}
+
+                //other.GetComponent<PlayerMove>().Teleport(diceV);
             }
             print(PublicVars.numStrikes);
         }

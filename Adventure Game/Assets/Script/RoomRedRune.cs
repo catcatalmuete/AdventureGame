@@ -28,6 +28,7 @@ public class RoomRedRune : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             runeUI[index].SetActive(true);
+            PublicVars.runeTotal += 1;
             index += 1;
             StartCoroutine(CollectRune());
         }
