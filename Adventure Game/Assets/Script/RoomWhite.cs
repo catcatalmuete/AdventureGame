@@ -83,7 +83,7 @@ public class RoomWhite : MonoBehaviour
         yield return new WaitForSeconds(5f);
         buffRoll = PublicVars.diceVal;
         //PublicVars.diceRollModifier += buffRoll;
-        if (buffRoll >=5){
+        if (buffRoll >=6){
             //get diceRoll buff +2
             PublicVars.diceRollModifier += 1;
         }
