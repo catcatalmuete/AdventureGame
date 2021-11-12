@@ -45,5 +45,10 @@ public class RoomRedRune : MonoBehaviour
             PublicVars.diceRollModifier += 1;
         }
 
+        // index = rune collect count that stars from 0
+        if (index == 1){
+            FindObjectOfType<PlayerMove>().currentRoom.complete = true;
+        }
+
     }
 }

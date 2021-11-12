@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
 
     public Room[] rooms;
     List<Room> roomsToFinish;
-    private Room currentRoom;
+    public Room currentRoom;
 
     void Start()
     {

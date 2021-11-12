@@ -88,6 +88,10 @@ public class RoomWhite : MonoBehaviour
             PublicVars.diceRollModifier += 1;
         }
 
+        if (runeCollect[0] && runeCollect[1]){
+            FindObjectOfType<PlayerMove>().currentRoom.complete = true;
+        }
+
     }
 
     IEnumerator DisableTrigger()

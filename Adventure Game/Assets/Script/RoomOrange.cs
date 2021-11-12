@@ -92,12 +92,15 @@ public class RoomOrange : MonoBehaviour
         if (buffRoll <=1){
             //get diceRoll buff +2
             PublicVars.diceRollModifier += 2;
-        } else if (buffRoll <=9){
+        } else if (buffRoll <=8){
             //get avoid instant death buff
-            PublicVars.instantDeath = false;
+            //PublicVars.instantDeath = false;
+            PublicVars.diceRollModifier += 4;
         } else {
             extraRuneUI.SetActive(true);
         }
+
+        FindObjectOfType<PlayerMove>().currentRoom.complete = true;
 
     }
 }
