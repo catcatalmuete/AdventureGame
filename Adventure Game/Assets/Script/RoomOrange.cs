@@ -12,6 +12,7 @@ public class RoomOrange : MonoBehaviour
     public GameObject chest;
     public GameObject rune;
     public GameObject runeUI;
+    public GameObject extraRuneUI;
     private int index;
     private int buffRoll;
     private bool runeCollect = false;
@@ -28,6 +29,7 @@ public class RoomOrange : MonoBehaviour
             candles[i].SetActive(false);
             inventoryC[i].SetActive(false);
         }
+        extraRuneUI.SetActive(false);
 
     }
 
@@ -87,13 +89,18 @@ public class RoomOrange : MonoBehaviour
         yield return new WaitForSeconds(5f);
         buffRoll = PublicVars.diceVal;
         //PublicVars.diceRollModifier += buffRoll;
-        if (buffRoll <=5){
+        if (buffRoll <=1){
             //get diceRoll buff +2
             PublicVars.diceRollModifier += 2;
-        } else {
+        } else if (buffRoll <=8){
             //get avoid instant death buff
-            PublicVars.instantDeath = false;
+            //PublicVars.instantDeath = false;
+            PublicVars.diceRollModifier += 4;
+        } else {
+            extraRuneUI.SetActive(true);
         }
+
+        FindObjectOfType<PlayerMove>().currentRoom.complete = true;
 
     }
 }

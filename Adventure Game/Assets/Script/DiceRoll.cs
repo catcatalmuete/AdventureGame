@@ -38,8 +38,8 @@ public class DiceRoll : MonoBehaviour
         diceCam.SetActive(true);
         mainCam.SetActive(false);
         Dice.Clear();
-        Dice.Roll("1d6", "d6-black", spawnPoint.transform.position, Force());
-        Dice.Roll("1d6", "d6-black", spawnPoint.transform.position, Force());
+        Dice.Roll("2d6", "d6-black", spawnPoint.transform.position, Force());
+        //Dice.Roll("1d6", "d6-black", spawnPoint.transform.position, Force());
 
         //Dice.Value("") to access the sum of diceroll
         if (Dice.Value("") > 0)

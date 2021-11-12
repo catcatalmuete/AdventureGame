@@ -15,6 +15,7 @@ TagManager:
   - WCrate
   - WShield
   - WSword
+  - RRune
   layers:
   - Default
   - TransparentFX
