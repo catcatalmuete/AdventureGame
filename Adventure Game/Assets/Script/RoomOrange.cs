@@ -29,6 +29,7 @@ public class RoomOrange : MonoBehaviour
             candles[i].SetActive(false);
             inventoryC[i].SetActive(false);
         }
+        extraRuneUI.SetActive(false);
 
     }
 
