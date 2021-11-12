@@ -30,6 +30,7 @@ public class RoomWhite : MonoBehaviour
         runeUI[0].SetActive(false);
         runeUI[1].SetActive(false);
         _collider = GetComponent<Collider>();
+        index = 0;
 
     }
 
